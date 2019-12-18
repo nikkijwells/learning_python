@@ -1,11 +1,15 @@
 def two_sum(numbers, target):
-    sum_counter = 0
+    find_this = 0
     for i in numbers:
-        if sum_counter == 0:
-            sum_counter = sum_counter + 1
-        elif sum_counter < target:
-            sum_counter = sum_counter + 1
-        elif sum_counter > target:
-            sum_counter = i
-        else:
-            return sum_counter
+        find_this = target - i
+        if find_this in numbers:
+            #if numbers.index(find_this) == numbers.index(i):
+                #find_this = "".join(numbers).Rfind(find_this)
+                #Return (numbers.index(i), find_this)
+            #else:
+            return (numbers.index(i), numbers.index(find_this, (numbers.index(i) + 1)))
+
+
+print(two_sum([1,2,3], 4))
+print(two_sum([1234,5678,9012], 14690))
+print(two_sum([2,2,3], 4))
