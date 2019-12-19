@@ -1,12 +1,7 @@
 def is_isogram(string):
-    for i in string:
-        index_i = string.index(i)
-        #if
-        print(string.find(i))
-        #== -1:
-            #return False
-        #else:
-            #return True
+    string = string.lower()
+    return len(set(string)) == len(string)
 
 print(is_isogram("Dermatoglyphics"))
 print(is_isogram("aba"))
+print(is_isogram("moOse"))
